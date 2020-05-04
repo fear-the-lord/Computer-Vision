@@ -1,0 +1,34 @@
+1. The 'argparse' module makes it easy to write user friendly command line interfaces. The argparse module also automatically generates help and usage messages and issues errors when user gives the program invalid arguments. 
+
+2. vars(object) takes only one parameter and that too is optional. It takes an object as a parameter which may be a module, a class, an instance, an object of the __dict__ attribute. The method returns the __dict__ attribute for a module, class, instance or any other object if the same has a __dict__ attribute. If the object fails to match the attribute it raises the TypeError Exception. (__dict__ is a specific dictionary that exists for each Python object, and contains the attributes of that object and their values. The double underscore is simply a Python convention for marking a variable as "special," but you're free to modify it like any other variable if you want.)
+
+3. readNetFromCaffe(bufferProto, bufferModel) reads a network model stored in Caffe Model in memory. 'bufferProto' contains the contents of the prototxt file. 'bufferModel' contains the content of the caffemodel file. Returns a net object.
+
+4. (h, w) = image.shape[:2] gets the height which is at index 0 and width which is at index 1 respectively. 
+
+5. blobFromImage(InputArray image, 
+				double scale_factor,  
+				const Size &, 
+				const Scalar &, 
+				bool swapRB,
+				bool crop,
+				int ddepth)
+
+	It is mainly used for image pre-processing. This creates 4-dimensional blob from image. Optionally resizes and crops image from center, subtract mean values, scales values by scalefactor, swap Blue and Red channels. Blob means Binary Large Object. It is a collection of binary data stored as a single entity. Blobs are typically images, audio or multimedia objects.
+
+6. net.setInput() sets the new input blob for network 
+
+7. net.forward() runs forward pass for a particular layer
+
+8. detections is an array of the form [1x1xNx..] where N is the no:of predictions.
+
+9. astype() is a method within numpy. ndarray , as well as the Pandas Series class, so can be used to convert vectors, matrices and columns within a DataFrame.
+
+10. cv2.rectangle(image, point1, point2, color, thickness, lineType, shift)
+
+11. cv2.putText(image, text, (point1, point2), font, fontScale, color, thickness)
+
+12. 'imutils' is a series of convenience functions to make basic image processing operations such as translation, rotation, resizing, skeletonization, and displaying Matplotlib images easier with OpenCV and Python.
+
+
+
