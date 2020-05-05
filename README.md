@@ -46,3 +46,22 @@ $<b>python detect_faces_video.py --prototxt prototxt.txt --model model.caffemode
   
   <hr style="width:50%;text-align:left;margin-left:0">
   
+  <h2>Day 3/Document Scanner</h2>
+  <p>The basic steps in creating a document scanner is:
+  <ul>
+    <li>Input the image.</li>
+    <li>Detect the edges.</li>
+    <li>Detect all the contours.</li>
+    <li>Find all the contours with the maximum area and with four points.</li>
+    <li>Draw that contour.</li>
+    <li>Apply four point transforms to obtain a top-down view of the original image.</li>
+    <li>Convert the image to gray scale.</li>
+    <li>Threshold the image to obtain a 'black & white' paper effect.</li>
+   </ul></p>
+   
+   Run the code as:<br> 
+    $<b>scan.py --image receipt.jpg</b>
+    
+   <hr style="width:50%;text-align:left;margin-left:0">
+ 
+  
