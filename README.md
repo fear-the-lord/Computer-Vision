@@ -60,7 +60,7 @@ $<b>python detect_faces_video.py --prototxt prototxt.txt --model model.caffemode
    </ul></p>
    
    Run the code as:<br> 
-    $<b>scan.py --image receipt.jpg</b>
+    $<b>python scan.py --image receipt.jpg</b>
     
    <hr style="width:50%;text-align:left;margin-left:0">
  
