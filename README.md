@@ -63,5 +63,27 @@ $<b>python detect_faces_video.py --prototxt prototxt.txt --model model.caffemode
     $<b>python scan.py --image receipt.jpg</b>
     
    <hr style="width:50%;text-align:left;margin-left:0">
+   
+   <h2>Day 4/Optical Mark Recognition</h2>
+   <p>The basic steps are: 
+    <ul>
+      <li>Input the image.</li>
+      <li>Input the answer key.</li>
+      <li>Detect the edges.</li>
+      <li>Detect the contour with the maximum area and four points.</li>
+      <li>Draw the contour.</li>
+      <li>Apply four point transforms to obtain a top-down view of the original image.</li>
+      <li>Apply Otsu's Thresholding to binarize the image.</li> 
+      <li>Draw all the Question contours from the binarized image.</li>
+      <li>Sort the contours in top-to-bottom approach.</li>
+      <li>Find the masked contours.</li> 
+      <li>Find the score corresponding to the masked contours.</li>
+    </ul><p>
+  
+  Run the code as:<br>
+  $<b>python test_grader.py --image images/test_01.png</b>
+  
+  <hr style="width:50%;text-align:left;margin-left:0">
+      
  
   
