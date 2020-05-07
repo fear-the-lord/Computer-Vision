@@ -84,6 +84,35 @@ $<b>python detect_faces_video.py --prototxt prototxt.txt --model model.caffemode
   $<b>python test_grader.py --image images/test_01.png</b>
   
   <hr style="width:50%;text-align:left;margin-left:0">
+  
+  <h3>Day 5/Ball Tracking</h3>
+  <p>The basic steps are:
+  <ul>
+    <li>Define the lower and upper boundaries of the object to be tracked using <b>range_detector.py</b>.</li>
+    <li>Use a deque with a fixed buffer size which will help in forming the tail.</li> 
+    <li>Input the video file. If the video file is not found start the camera.</li>
+    <li>Read a frame.</li>
+    <li>Resize it, Blur it and convert it to HSV color space.</li>
+    <li>Construct a mask for the object, then perform a series of dilations and erotions to remove any small blobs left in the mask.</li>
+    <li>Compute the contour of the ball and draw it in our frame.</li>
+    <li>Only proceed if atleast one contour was found.</li>
+    <li>Find the largest contour in the mask.</li>
+    <li>Use it to form the minimum enclosing circle and centroid.</li>
+    <li>Draw a circle around the object if the radius meets a minimum size.</li>
+    <li>Insert the center coordinates in the deque.</li>
+    <li>Track the points and draw the line.</li>
+    <li>Show the frame.</li>
+  </ul>
+  
+  Run the range detector as: <br>
+  $<b>python range_detector.py --filter HSV --image <image_path></b><br>
+  Run the ball tracker as: <br>
+  $<b>python ball_tracker.py --video <video_path></b>(in order to stream a video file).<br>
+  $<b>python ball_tracker.py</b>(for web-cam streaming).
+  
+  <hr style="width:50%;text-align:left;margin-left:0">
+  
+  
       
  
   
